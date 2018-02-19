@@ -10,9 +10,10 @@ type ProtoDep struct {
 }
 
 type ProtoDepDependency struct {
-	Target   string `toml:"target"`
-	Revision string `toml:"revision"`
-	Branch   string `toml:"branch"`
+	Target   string   `toml:"target"`
+	Revision string   `toml:"revision"`
+	Branch   string   `toml:"branch"`
+	Ignored  []string `toml:"ignored"`
 }
 
 func (d *ProtoDepDependency) Repository() string {
